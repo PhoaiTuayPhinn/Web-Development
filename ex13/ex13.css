@@ -1,0 +1,74 @@
+/* ===== TIÊU ĐỀ ===== */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #BDA18C; /* nâu đất */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===== BẢNG ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF; /* trắng */
+  border: 2px solid #B4A79E; /* xám nâu */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== HEADER ===== */
+th {
+  background-color: #E6DCD3; /* be nhạt */
+  color: #5a4a42;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid #B4A79E;
+}
+
+/* ===== CELL ===== */
+td {
+  padding: 12px;
+  border: 1px solid #B4A79E;
+  color: #4a3f39;
+  font-size: 14px;
+}
+
+/* ===== HOVER ROW ===== */
+tr:hover td {
+  background-color: #E6DCD3;
+  transition: background-color 0.3s ease;
+}
+
+/* ===== HÌNH ẢNH ===== */
+img {
+  max-width: 120px;
+  border-radius: 8px;
+  border: 2px solid #BDA18C;
+  padding: 5px;
+  background-color: #FFFFFF;
+}
+
+/* ===== LINK DETAILS ===== */
+a {
+  color: #BDA18C;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #8f6f5a;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  img {
+    max-width: 80px;
+  }
+}
