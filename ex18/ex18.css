@@ -1,0 +1,229 @@
+/* ===== CONTAINER CHÍNH ===== */
+.exercise-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #E6DCD3; /* be nhạt */
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.exercise-title {
+  text-align: center;
+  color: #BDA18C; /* nâu đất */
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* ===== CUSTOMER GROUP TABLE ===== */
+.customer-group-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 35px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF; /* trắng */
+}
+
+/* ===== GROUP HEADER ===== */
+.group-header {
+  background: #BDA18C; /* nâu đất */
+  color: #FFFFFF;
+  padding: 18px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.group-header .group-id {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+/* ===== TABLE HEADER ===== */
+.customer-group-table thead {
+  background: #B4A79E; /* xám nâu */
+  color: #FFFFFF;
+}
+
+.customer-group-table thead th {
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.customer-group-table thead th:nth-child(1) { width: 10%; }
+.customer-group-table thead th:nth-child(2) { width: 25%; }
+.customer-group-table thead th:nth-child(3) { width: 30%; }
+.customer-group-table thead th:nth-child(4) { width: 10%; }
+.customer-group-table thead th:nth-child(5) { width: 25%; }
+
+/* ===== TABLE BODY ===== */
+.customer-group-table tbody tr {
+  border-bottom: 1px solid #E6DCD3;
+  transition: all 0.3s ease;
+}
+
+.customer-group-table tbody tr:hover {
+  background-color: #E6DCD3;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(180, 167, 158, 0.4);
+}
+
+.customer-group-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.customer-group-table tbody td {
+  padding: 18px 15px;
+  vertical-align: middle;
+  color: #4a3f39;
+  border: none;
+}
+
+/* ===== CELL STYLES ===== */
+.cell-id {
+  font-weight: 700;
+  color: #BDA18C;
+  font-size: 16px;
+}
+
+.cell-name {
+  font-weight: 600;
+  color: #4a3f39;
+  font-size: 15px;
+}
+
+.cell-email {
+  color: #7a6a60;
+  font-style: italic;
+}
+
+.cell-age {
+  font-weight: 600;
+  color: #B4A79E;
+  text-align: center;
+  font-size: 16px;
+}
+
+.cell-image {
+  text-align: center;
+  padding: 10px;
+}
+
+/* ===== CUSTOMER IMAGE ===== */
+.customer-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #E6DCD3;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.customer-image:hover {
+  transform: scale(1.15);
+  border-color: #BDA18C;
+  box-shadow: 0 6px 20px rgba(189, 161, 140, 0.5);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.customer-group-table {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* ===== BADGE STYLE ===== */
+.age-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #BDA18C;
+  color: #FFFFFF;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .customer-group-table thead th,
+  .customer-group-table tbody td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .customer-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .group-header {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .exercise-container {
+    padding: 10px;
+  }
+
+  .exercise-title {
+    font-size: 24px;
+  }
+
+  .customer-group-table thead th,
+  .customer-group-table tbody td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .customer-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .group-header {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+.exercise-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.exercise-container::-webkit-scrollbar-track {
+  background: #E6DCD3;
+  border-radius: 10px;
+}
+
+.exercise-container::-webkit-scrollbar-thumb {
+  background: #B4A79E;
+  border-radius: 10px;
+}
+
+.exercise-container::-webkit-scrollbar-thumb:hover {
+  background: #BDA18C;
+}

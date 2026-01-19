@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="ex14.css">
+
+<div class="exercise-container">
+  <h2 class="exercise-title">Exercise 14</h2>
+
+  <div *ngFor="let c of categories" class="category-wrapper">
+
+    <!-- ===== BẢNG DANH MỤC ===== -->
+    <table class="category-table">
+      <tr>
+        <td class="label">Ma Danh Muc</td>
+        <td class="label">Ten Danh Muc</td>
+      </tr>
+      <tr>
+        <td class="value">{{ c.Cateid }}</td>
+        <td class="value">{{ c.CateName }}</td>
+      </tr>
+    </table>
+
+    <!-- ===== BẢNG SẢN PHẨM ===== -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <td>Ma San Pham</td>
+          <td>Ten San Pham</td>
+          <td>Gia San Pham</td>
+          <td>Picture</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of c.Products">
+          <td class="col-id">{{ p.ProductId }}</td>
+          <td class="col-name">{{ p.ProductName }}</td>
+          <td class="col-price">{{ p.Price }}</td>
+          <td class="col-picture">
+            <img [src]="p.Image" class="product-image" [alt]="p.ProductName" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

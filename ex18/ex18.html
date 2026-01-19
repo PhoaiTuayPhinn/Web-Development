@@ -1,0 +1,48 @@
+<div class="exercise-container">
+
+  <h2 class="exercise-title">Exercise 18</h2>
+
+  <table
+    class="customer-group-table"
+    *ngFor="let g of groups"
+  >
+    <!-- GROUP HEADER -->
+    <tr>
+      <th colspan="5" class="group-header">
+        <span class="group-id">{{ g.CustomerTypeId }}</span>
+        - {{ g.CustomterTypeName }}
+      </th>
+    </tr>
+
+    <!-- TABLE HEADER -->
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>#</th>
+      </tr>
+    </thead>
+
+    <!-- TABLE BODY -->
+    <tbody>
+      <tr *ngFor="let c of g.Customers">
+        <td class="cell-id">{{ c.Id }}</td>
+        <td class="cell-name">{{ c.Name }}</td>
+        <td class="cell-email">{{ c.Email }}</td>
+        <td class="cell-age">
+          <span class="age-badge">{{ c.Age }}</span>
+        </td>
+        <td class="cell-image">
+          <img
+            [src]="c.Image"
+            class="customer-image"
+          />
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
